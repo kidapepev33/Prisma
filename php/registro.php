@@ -40,7 +40,7 @@ if ($checkStmt) {
     $result = $checkStmt->get_result();
     
     if ($result->num_rows > 0) {
-        // El email ya existe clases van entren los echo tambien con die entre parentensis
+        // El email ya existe
         echo "❌ Error: Ese email ya está en uso. Por favor, usa otro email.";
         $checkStmt->close();
         $conn->close();
@@ -57,6 +57,14 @@ if ($checkStmt) {
 // Si llegamos aquí, el email no existe, proceder con el registro
 // Encriptar la contraseña
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+// Debug - ver qué datos estamos enviando
+echo "<br>--- DEBUG INFO ---<br>";
+echo "Nombre: '" . $nombre . "' (longitud: " . strlen($nombre) . ")<br>";
+echo "Email: '" . $email . "' (longitud: " . strlen($email) . ")<br>";
+echo "Password original: '" . $password . "' (longitud: " . strlen($password) . ")<br>";
+echo "Password hash: '" . $hashedPassword . "' (longitud: " . strlen($hashedPassword) . ")<br>";
+echo "--- FIN DEBUG ---<br><br>";
 
 // Insertar en la base de datos
 $sql = "INSERT INTO usuarios_db (nombre, email, password) VALUES (?, ?, ?)";
