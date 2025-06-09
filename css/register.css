@@ -1,0 +1,7 @@
+.register{
+    color: var(--blanco);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 1rem;
+    text-decoration: none;
+    border: none;
+}

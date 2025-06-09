@@ -1,0 +1,149 @@
+.login-container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.login-footer a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para mensajes (reutilizando del registro) */
+.error-message,
+.success-message {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+}
+
+.error-message {
+    background: linear-gradient(135deg, #ff6b6b, #ff5252);
+    color: white;
+    border-left: 5px solid #d32f2f;
+}
+
+.success-message {
+    background: linear-gradient(135deg, #4caf50, #45a049);
+    color: white;
+    border-left: 5px solid #2e7d32;
+}
+
+.error-icon,
+.success-icon {
+    font-size: 24px;
+    margin-right: 12px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.error-message span,
+.success-message span {
+    flex: 1;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px 20px;
+    }
+
+    .login-header h1 {
+        font-size: 24px;
+    }
+}
