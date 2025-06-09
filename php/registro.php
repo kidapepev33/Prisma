@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 $host = $_ENV['MYSQLHOST'] ?? 'mysql.railway.internal';
 $port = $_ENV['MYSQLPORT'] ?? '3306';
 $username = $_ENV['MYSQLUSER'] ?? 'root';
-$password = $_ENV['MYSQLPASSWORD'] ?? 'VXTTjXyzYZzTpkYeWTgwiFYNaNMoyoDI';
+$password = $_ENV['MYSQLPASSWORD'] ?? 'RukozJeIdnEMHWIkHoUbAjccLYOxCYxx';
 $database = $_ENV['MYSQLDATABASE'] ?? 'railway';
 
 // Crear conexión
