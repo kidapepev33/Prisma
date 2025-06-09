@@ -4,7 +4,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Conexión a la base de datos
-$conn = new mysqli("localhost", "root", "", "proyectoprisma");
+$conn = new mysqli("mysql.railway.internal", "root", "VXTTjXyzYZzTpkYeWTgwiFYNaNMoyoDI", "railway");
 
 // Verificar conexión
 if ($conn->connect_error) {
