@@ -58,14 +58,6 @@ if ($checkStmt) {
 // Encriptar la contraseña
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-// Debug - ver qué datos estamos enviando
-echo "<br>--- DEBUG INFO ---<br>";
-echo "Nombre: '" . $nombre . "' (longitud: " . strlen($nombre) . ")<br>";
-echo "Email: '" . $email . "' (longitud: " . strlen($email) . ")<br>";
-echo "Password original: '" . $password . "' (longitud: " . strlen($password) . ")<br>";
-echo "Password hash: '" . $hashedPassword . "' (longitud: " . strlen($hashedPassword) . ")<br>";
-echo "--- FIN DEBUG ---<br><br>";
-
 // Insertar en la base de datos
 $sql = "INSERT INTO usuarios_db (nombre, email, password) VALUES (?, ?, ?)";
 $stmt = $conn->prepare($sql);
