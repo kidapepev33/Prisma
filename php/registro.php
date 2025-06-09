@@ -3,13 +3,22 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Conexión a la base de datos
-$conn = new mysqli("mysql.railway.internal", "root", "VXTTjXyzYZzTpkYeWTgwiFYNaNMoyoDI", "railway");
+// Obtener variables de entorno de Railway
+$host = $_ENV['MYSQLHOST'] ?? 'mysql.railway.internal';
+$port = $_ENV['MYSQLPORT'] ?? '3306';
+$username = $_ENV['MYSQLUSER'] ?? 'root';
+$password = $_ENV['MYSQLPASSWORD'] ?? 'VXTTjXyzYZzTpkYeWTgwiFYNaNMoyoDI';
+$database = $_ENV['MYSQLDATABASE'] ?? 'railway';
+
+// Crear conexión
+$conn = new mysqli($host, $username, $password, $database, $port);
 
 // Verificar conexión
 if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+    die("Conexión fallida: " . $conn->connect_error);
 }
+
+echo "Conexión exitosa a la base de datos!";
 
 // Validar datos recibidos
 if (empty($_POST['nombre']) || empty($_POST['email']) || empty($_POST['password'])) {
