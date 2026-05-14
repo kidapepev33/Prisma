@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisma</title>
+    <link rel="stylesheet" href="/prisma/assets/css/composer.css">
+</head>
+
+<body class="index-page">
+    <main class="main-flex">
+        <a href="/prisma/assets/view/auth/login.html">
+            <div class="container_index">
+                <img class="tittle" src="/prisma/assets/img/text_logos/Prisma_text.png" alt="">
+                <img src="/prisma/assets/img/logo/logo_principal.png" alt="">
+            </div>
+        </a>
+    </main>
+    <script>const nextPage = sessionStorage.getItem('nextPage');
+
+        if (nextPage) {
+            sessionStorage.removeItem('nextPage');
+
+            setTimeout(function () {
+                document.body.classList.add('slide-out');
+                setTimeout(() => window.location.href = nextPage, 400);
+            }, 1000);
+        };</script>
+</body>
+
+</html>

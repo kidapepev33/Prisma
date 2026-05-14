@@ -1,0 +1,31 @@
+.main-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--principal);
+}
+
+.main-flex img {
+    height: 80vh;
+}
+
+.container_index .tittle {
+    height: 10vh;
+    margin-top: 20vh;
+    margin-bottom: -10vh;
+}
+
+.container_index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: var(--white);
+    border: 2px solid var(--border);
+    padding: 1rem 3rem;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}

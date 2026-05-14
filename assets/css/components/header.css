@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--second_color);
+  margin-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+.header_items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.header_items .header_img {
+  width: 15vh;
+  height: auto;
+}
+
+.header_title {
+  width: 25vh;
+  height: auto;
+}
+
+.header_user {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+.session{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.bi-person-circle {
+  font-size: 3rem;
+  margin-right: 0.5rem;
+}
+@media (max-width: 750px) {
+  .header {
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    gap: 0px;
+    padding-bottom: 1rem;
+  }
+  .header_items {
+    margin-left: -9rem;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .header img {
+    width: 6vh;
+    margin-right: -3rem;
+  }
+  .header_user {
+    margin-right: 0rem;
+    gap: 1rem;
+    margin-top: -1rem;
+  }
+}
+#userName{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

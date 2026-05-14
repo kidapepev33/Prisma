@@ -1,0 +1,152 @@
+.admin_page {
+    margin: 0 4% 2rem;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.admin_panel,
+.builder_panel {
+    background: var(--box_background);
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    padding: 1.2rem;
+}
+
+.admin_grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.admin_card {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 1rem;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.stack_form {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.admin_btn {
+    background: var(--border);
+    border-radius: 10px;
+    padding: 0.8rem;
+}
+
+.admin_btn.secondary {
+    background: #4f9ca0;
+}
+
+.builder_topbar {
+    margin-top: 0.8rem;
+    display: grid;
+    grid-template-columns: 1.3fr 1.3fr 1fr auto auto auto;
+    gap: 0.6rem;
+}
+
+.builder_layout {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 240px 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.builder_sidebar,
+.builder_canvas_wrap,
+.builder_preview_wrap {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 0.8rem;
+}
+
+.block_palette {
+    display: grid;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.palette_item {
+    border: 2px dashed var(--border);
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--white);
+    background: rgba(49, 132, 135, 0.3);
+    cursor: grab;
+}
+
+.builder_canvas,
+.builder_preview {
+    min-height: 380px;
+    max-height: 65vh;
+    overflow: auto;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 12px;
+    padding: 0.8rem;
+}
+
+.module_card,
+.lesson_card,
+.block_card,
+.preview_card {
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.22);
+    margin-bottom: 0.7rem;
+    padding: 0.6rem;
+}
+
+.lesson_blocks {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.block_toolbar {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: flex-end;
+}
+
+textarea,
+select {
+    width: 100%;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 0.6rem;
+    font-family: "Jua", sans-serif;
+}
+
+.preview_block img,
+.preview_block iframe,
+.preview_block video {
+    width: 100%;
+    max-height: 260px;
+    border-radius: 10px;
+}
+
+.preview_separator {
+    height: 2px;
+    background: var(--border);
+    margin: 1rem 0;
+}
+
+@media (max-width: 1150px) {
+    .builder_layout {
+        grid-template-columns: 1fr;
+    }
+
+    .builder_topbar {
+        grid-template-columns: 1fr;
+    }
+
+    .admin_grid {
+        grid-template-columns: 1fr;
+    }
+}

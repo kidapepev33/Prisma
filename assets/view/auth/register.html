@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/prisma/assets/css/composer.css">
+    <title>Registro PRISMA</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_items">
+            <a href="/prisma/assets/view/pages/cursos.html">
+                <img class="header_img" src="/prisma/assets/img/logo/logo_principal.png" alt="Logo PRISMA">
+            </a>
+            <a href="/prisma/assets/view/pages/cursos.html"><i class="bi bi-arrow-left"
+            style="visibility: hidden;"></i></a>
+        </div>
+        <img class="header_title" src="/prisma/assets/img/text_logos/Prisma_text.png" alt="title">
+        <div class="header_user" style="visibility: hidden;">
+            <a class="link-hover" href="#" class="session" id="userName">Cargando...<i
+                    class="bi bi-person-circle"></i></a>
+            <a class="link-hover" href="/prisma/backend/logout.php" title="Cerrar Sesión">
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Regístrate</h2>
+
+            <form class="form" id="registerForm" method="POST">
+                <input type="text" name="nombre" placeholder="Nombre(s)" required>
+                <input type="text" name="apellido" placeholder="Apellido(s)" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="password" name="confirm_password" placeholder="Confirmar Contraseña" required>
+
+                <div class="form-footer">
+                    <button type="submit" class="button">Registrarme</button>
+                    <a href="/prisma/assets/view/auth/login.html">Iniciar Sesión</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="/prisma/assets/js/transition.js"></script>
+    <script src="/prisma/assets/js/toast.js"></script>
+    <script src="/prisma/assets/js/auth.js"></script>
+</body>
+
+</html>

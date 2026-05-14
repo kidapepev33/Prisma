@@ -1,0 +1,15 @@
+@import url(/prisma/assets/css/pages/index.css);
+@import url(/prisma/assets/css/global/stylesheet.css);
+@import url(/prisma/assets/css/components/header.css);
+@import url(/prisma/assets/css/pages/auth.css);
+@import url(/prisma/assets/css/pages/cursos.css);
+@import url(/prisma/assets/css/pages/lesco.css); 
+@import url(/prisma/assets/css/components/toast.css); 
+@import url(/prisma/assets/css/pages/artes.css); 
+@import url(/prisma/assets/css/pages/idioma.css); 
+@import url(/prisma/assets/css/pages/ingles.css); 
+@import url(/prisma/assets/css/pages/español.css); 
+@import url(/prisma/assets/css/pages/progra.css); 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url(/prisma/assets/css/pages/admin.css);

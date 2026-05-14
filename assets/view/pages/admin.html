@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Cursos</title>
+    <link rel="stylesheet" href="/prisma/assets/css/composer.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_items">
+            <a href="/prisma/assets/view/pages/cursos.html">
+                <img class="header_img" src="/prisma/assets/img/logo/logo_principal.png" alt="Logo PRISMA">
+            </a>
+            <a href="/prisma/assets/view/pages/cursos.html"><i class="bi bi-arrow-left"></i></a>
+        </div>
+        <img class="header_title" src="/prisma/assets/img/text_logos/Prisma_text.png" alt="title">
+        <div class="header_user">
+            <a class="link-hover session" href="#" id="userName">Cargando...<i class="bi bi-person-circle"></i></a>
+            <a class="link-hover" href="/prisma/backend/logout.php" title="Cerrar Sesion"><i class="bi bi-box-arrow-right"></i></a>
+        </div>
+    </header>
+
+    <main class="admin_page">
+        <section class="admin_panel">
+            <h1>Panel Admin</h1>
+            <p>Gestiona estudiantes, cursos y permisos de acceso.</p>
+
+            <div class="admin_grid">
+                <article class="admin_card">
+                    <h2>Anadir Estudiante</h2>
+                    <form id="studentForm" class="stack_form">
+                        <input type="text" id="studentName" placeholder="Nombre" required>
+                        <input type="text" id="studentLastName" placeholder="Apellido" required>
+                        <input type="email" id="studentEmail" placeholder="Email" required>
+                        <input type="password" id="studentPassword" placeholder="Contrasena temporal" required>
+                        <button type="submit" class="admin_btn">Crear estudiante</button>
+                    </form>
+                </article>
+
+                <article class="admin_card">
+                    <h2>Permisos por Curso</h2>
+                    <label for="accessCourse">Curso</label>
+                    <select id="accessCourse"></select>
+                    <label for="accessStudents">Estudiantes con acceso</label>
+                    <select id="accessStudents" multiple size="7"></select>
+                    <button id="saveAccess" class="admin_btn">Guardar permisos</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="builder_panel">
+            <div class="builder_header">
+                <h2>Creador Visual de Cursos</h2>
+                <p>Estilo simple tipo Notion/Canva/Framer con bloques drag-and-drop.</p>
+            </div>
+
+            <div class="builder_topbar">
+                <input id="courseTitle" type="text" placeholder="Titulo del curso">
+                <input id="courseDescription" type="text" placeholder="Descripcion corta del curso">
+                <select id="templateSelect"></select>
+                <button id="applyTemplate" class="admin_btn">Aplicar template</button>
+                <button id="saveTemplate" class="admin_btn secondary">Guardar como template</button>
+                <button id="saveCourse" class="admin_btn">Guardar curso</button>
+            </div>
+
+            <div class="builder_layout">
+                <aside class="builder_sidebar">
+                    <h3>Bloques</h3>
+                    <div id="blockPalette" class="block_palette"></div>
+                    <button id="addModule" class="admin_btn">+ Modulo</button>
+                    <button id="addLesson" class="admin_btn secondary">+ Leccion</button>
+                </aside>
+
+                <section class="builder_canvas_wrap">
+                    <h3>Editor</h3>
+                    <div id="builderCanvas" class="builder_canvas"></div>
+                </section>
+
+                <section class="builder_preview_wrap">
+                    <h3>Live Preview</h3>
+                    <div id="builderPreview" class="builder_preview"></div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script src="/prisma/assets/js/toast.js"></script>
+    <script src="/prisma/assets/js/transition.js"></script>
+    <script src="/prisma/assets/js/admin.js"></script>
+</body>
+
+</html>

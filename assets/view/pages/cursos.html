@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link rel="stylesheet" href="/prisma/assets/css/composer.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header_items">
+            <a href="/prisma/assets/view/pages/cursos.html">
+                <img class="header_img" src="/prisma/assets/img/logo/logo_principal.png" alt="Logo PRISMA">
+            </a>
+            <a href="/prisma/assets/view/pages/cursos.html"><i class="bi bi-arrow-left" style="visibility: hidden;"></i></a>
+        </div>
+        <img class="header_title" src="/prisma/assets/img/text_logos/Prisma_text.png" alt="title">
+        <div class="header_user">
+            <a class="link-hover session" href="#" id="userName">Cargando...<i class="bi bi-person-circle"></i></a>
+            <a class="link-hover" href="/prisma/backend/logout.php" title="Cerrar Sesion">
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </div>
+    </header>
+
+    <div class="container_cursos_page">
+        <div class="admin_entry" id="adminEntry" style="display:none;">
+            <a href="/prisma/assets/view/pages/admin.html" class="admin_btn">Ir a Panel Admin</a>
+        </div>
+        <h1 class="cursos_title">Cursos Disponibles</h1>
+        <div class="container_cursos" id="coursesContainer"></div>
+        <h3 id="coursesFooter">Unete a Prisma y prueba los cursos que ofrecemos</h3>
+    </div>
+
+    <script src="/prisma/assets/js/toast.js"></script>
+    <script src="/prisma/assets/js/transition.js"></script>
+    <script src="/prisma/assets/js/session.js"></script>
+    <script src="/prisma/assets/js/courses.js"></script>
+</body>
+
+</html>
